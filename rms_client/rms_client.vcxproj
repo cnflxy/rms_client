@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{db3baf67-d01c-4180-a7ca-d152e076dc72}</ProjectGuid>
+    <RootNamespace>rmsclient</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\code\rms_client\rms_client\lib;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\code\rms_client\rms_client\lib;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="lib\zlib\adler32.c" />
+    <ClCompile Include="lib\zlib\compress.c" />
+    <ClCompile Include="lib\zlib\crc32.c" />
+    <ClCompile Include="lib\zlib\deflate.c" />
+    <ClCompile Include="lib\zlib\gzlib.c" />
+    <ClCompile Include="lib\zlib\inffast.c" />
+    <ClCompile Include="lib\zlib\inflate.c" />
+    <ClCompile Include="lib\zlib\inftrees.c" />
+    <ClCompile Include="lib\zlib\trees.c" />
+    <ClCompile Include="lib\zlib\uncompr.c" />
+    <ClCompile Include="lib\zlib\zutil.c" />
+    <ClCompile Include="lib\zstd\common\entropy_common.c" />
+    <ClCompile Include="lib\zstd\common\error_private.c" />
+    <ClCompile Include="lib\zstd\common\fse_decompress.c" />
+    <ClCompile Include="lib\zstd\common\xxhash.c" />
+    <ClCompile Include="lib\zstd\common\zstd_common.c" />
+    <ClCompile Include="lib\zstd\compress\fse_compress.c" />
+    <ClCompile Include="lib\zstd\compress\hist.c" />
+    <ClCompile Include="lib\zstd\compress\huf_compress.c" />
+    <ClCompile Include="lib\zstd\compress\zstd_compress.c" />
+    <ClCompile Include="lib\zstd\compress\zstd_compress_literals.c" />
+    <ClCompile Include="lib\zstd\compress\zstd_compress_sequences.c" />
+    <ClCompile Include="lib\zstd\compress\zstd_compress_superblock.c" />
+    <ClCompile Include="lib\zstd\compress\zstd_double_fast.c" />
+    <ClCompile Include="lib\zstd\compress\zstd_fast.c" />
+    <ClCompile Include="lib\zstd\compress\zstd_lazy.c" />
+    <ClCompile Include="lib\zstd\compress\zstd_ldm.c" />
+    <ClCompile Include="lib\zstd\compress\zstd_opt.c" />
+    <ClCompile Include="lib\zstd\decompress\huf_decompress.c" />
+    <ClCompile Include="lib\zstd\decompress\zstd_ddict.c" />
+    <ClCompile Include="lib\zstd\decompress\zstd_decompress.c" />
+    <ClCompile Include="lib\zstd\decompress\zstd_decompress_block.c" />
+    <ClCompile Include="rms_client.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="buffer_queue.h" />
+    <ClInclude Include="com_helper.h" />
+    <ClInclude Include="console_helper.h" />
+    <ClInclude Include="file_explorer.h" />
+    <ClInclude Include="host_probe.h" />
+    <ClInclude Include="image_transformer.h" />
+    <ClInclude Include="mf_helper.h" />
+    <ClInclude Include="mf_source.h" />
+    <ClInclude Include="mf_source_reader.h" />
+    <ClInclude Include="monitor_capturer.h" />
+    <ClInclude Include="pipe_client.h" />
+    <ClInclude Include="pipe_message.h" />
+    <ClInclude Include="pipe_server.h" />
+    <ClInclude Include="registry_explorer.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="rms_client.h" />
+    <ClInclude Include="rms_message.h" />
+    <ClInclude Include="rms_user.h" />
+    <ClInclude Include="sdk_version.h" />
+    <ClInclude Include="service_helper.h" />
+    <ClInclude Include="session_helper.h" />
+    <ClInclude Include="utility.h" />
+    <ClInclude Include="zip.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="rms_client.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\RMS_WskDriver\Debug\RMS_WskDriver.sys" />
+    <None Include="..\..\RMS_WskDriver\x64\Debug\RMS_WskDriver.sys" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\zstd">
+      <UniqueIdentifier>{8edf42ea-f3c3-4b65-9848-0d0d91059d8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\zstd\compress">
+      <UniqueIdentifier>{8301d1ba-59e1-4091-84f3-4fea2d3016e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\zstd\common">
+      <UniqueIdentifier>{004d3967-5744-47f0-a610-3e932d62c775}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\zstd\decompress">
+      <UniqueIdentifier>{07bd05b4-54e4-4f84-8c01-dc65ff1a0095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\zlib">
+      <UniqueIdentifier>{c2753f64-c895-4e76-9363-900ff09a1ebb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="rms_client.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\compress\fse_compress.c">
+      <Filter>源文件\zstd\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\compress\hist.c">
+      <Filter>源文件\zstd\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\compress\huf_compress.c">
+      <Filter>源文件\zstd\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\compress\zstd_compress.c">
+      <Filter>源文件\zstd\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\compress\zstd_compress_literals.c">
+      <Filter>源文件\zstd\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\compress\zstd_compress_sequences.c">
+      <Filter>源文件\zstd\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\compress\zstd_compress_superblock.c">
+      <Filter>源文件\zstd\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\compress\zstd_double_fast.c">
+      <Filter>源文件\zstd\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\compress\zstd_fast.c">
+      <Filter>源文件\zstd\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\compress\zstd_lazy.c">
+      <Filter>源文件\zstd\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\compress\zstd_ldm.c">
+      <Filter>源文件\zstd\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\compress\zstd_opt.c">
+      <Filter>源文件\zstd\compress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\common\entropy_common.c">
+      <Filter>源文件\zstd\common</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\common\error_private.c">
+      <Filter>源文件\zstd\common</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\common\fse_decompress.c">
+      <Filter>源文件\zstd\common</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\common\xxhash.c">
+      <Filter>源文件\zstd\common</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\common\zstd_common.c">
+      <Filter>源文件\zstd\common</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\decompress\zstd_decompress.c">
+      <Filter>源文件\zstd\decompress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\decompress\huf_decompress.c">
+      <Filter>源文件\zstd\decompress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\decompress\zstd_ddict.c">
+      <Filter>源文件\zstd\decompress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zstd\decompress\zstd_decompress_block.c">
+      <Filter>源文件\zstd\decompress</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zlib\compress.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zlib\inflate.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zlib\uncompr.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zlib\zutil.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zlib\crc32.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zlib\deflate.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zlib\adler32.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zlib\gzlib.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zlib\inftrees.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zlib\trees.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\zlib\inffast.c">
+      <Filter>源文件\zlib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="rms_client.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rms_user.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="utility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="host_probe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="rms_message.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="zip.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="buffer_queue.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="file_explorer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="monitor_capturer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pipe_client.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pipe_server.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="service_helper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="session_helper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="registry_explorer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk_version.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="com_helper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="image_transformer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mf_source.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mf_source_reader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="console_helper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="mf_helper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pipe_message.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="rms_client.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\RMS_WskDriver\Debug\RMS_WskDriver.sys" />
+    <None Include="..\..\RMS_WskDriver\x64\Debug\RMS_WskDriver.sys" />
+  </ItemGroup>
+</Project>

